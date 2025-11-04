@@ -9,7 +9,7 @@ export const query = (text, params) => {
     return pool.query(text, params);
 };
 
-const initializaDataBase = async () => {
+const initializeDataBase = async () => {
     try {
         await query(`
             CREATE TABLE IF NOT EXISTS posts (
@@ -25,3 +25,7 @@ const initializaDataBase = async () => {
         console.error('Error initializing database:', error);
     }
 }
+
+initializeDataBase();
+
+export default pool;
