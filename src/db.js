@@ -18,8 +18,8 @@ const initializeDataBase = async () => {
         await query(`
             CREATE TABLE IF NOT EXISTS posts (
                 id SERIAL PRIMARY KEY,
-                content TXT NOT NULL,
-                crated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                content TEXT NOT NULL, 
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                 updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             );
         `);
