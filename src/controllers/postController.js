@@ -18,7 +18,7 @@ export const createPost = async (req, res) => {
 export const getAllPosts = async (req, res) => {
     try {
         const getPostsQuery = `
-            SELECT id, content , created_at
+            SELECT id, content, created_at
             FROM posts
             ORDER BY created_at DESC;
         `;
